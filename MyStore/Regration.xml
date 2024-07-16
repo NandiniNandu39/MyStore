@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ParralelSuite" parallel="methods">
+	<listeners>
+        <listener class-name="com.mystore.base.ExtentTestNGITestListener"/>
+    </listeners>
+  <test thread-count="2" name="CrossBrowserTest">
+	  
+    <classes>
+      <class name="com.mystore.testcases.TC002_VerifyUserIsAbleToCreateAnAccount"/>
+      <class name="com.mystore.testcases.TC001_VerifyUserIsAbleToNavigateToApplication"/>
+      <class name="com.mystore.testcases.VerifyUserIsAbleToCreateAnAccount"/>
+      <class name="com.mystore.testcases.TC001_VerifyUserIsAbleToNavigateToMyStore"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- RegrationSuite -->

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [CrossBrowserSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.mystore.base.ExtentTestNGITestListener"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="EdgeTest(failed)">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="com.mystore.testcases.VerifyUserIsAbleToCreateAnAccount">
+        <methods>
+          <include name="quit"/>
+          <include name="loadConfig"/>
+          <include name="createAnAccount"/>
+          <include name="getDriver"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.VerifyUserIsAbleToCreateAnAccount -->
+    </classes>
+  </test> <!-- EdgeTest(failed) -->
+</suite> <!-- Failed suite [CrossBrowserSuite] -->
